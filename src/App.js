@@ -14,6 +14,7 @@ import { extend } from '@react-three/fiber';
 
 
 
+
 extend ({TextGeometry})
 
 
@@ -72,6 +73,7 @@ function App() {
 
         <Suspense fallback={null}>
           <Screen />
+       
          
           <OrbitControls />
         </Suspense>
