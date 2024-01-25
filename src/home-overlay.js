@@ -8,6 +8,8 @@ import { state } from './store'
 import { Canvas, extend } from '@react-three/fiber'
 import { Html, useProgress } from "@react-three/drei";
 
+import "./index.css";
+
 extend({ motion, AnimatePresence, Canvas,  state, Logo, AiFillCamera, AiOutlineArrowLeft, AiOutlineHighlight, AiOutlineShopping });
 
 export default function Overlay() {
@@ -20,7 +22,7 @@ export default function Overlay() {
   } 
   return (
    
-    <Html as='div' center>
+    <Html>
       <motion.header initial={{ opacity: 0, y: -100 }} animate={{ opacity: 1, y: 0 }} transition={transition}>
       
         <motion.div animate={{ x: snap.intro ? 0 : 100, opacity: snap.intro ? 1 : 0 }} transition={transition}>
@@ -46,9 +48,9 @@ export default function Overlay() {
                     delayChildren: 0.2
                   }}>
                 
-                  <button style={{ background: "white"}} onClick={() => (state.intro = false)}>
-                     Answer
-                  </button>
+                <button className="custom-button" onClick={() => (state.intro = false)}>
+  <span>Answer</span> <AiOutlineHighlight size="1.3em" />
+</button>
                 </motion.div>
               </div>
             </div>

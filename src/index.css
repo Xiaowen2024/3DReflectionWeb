@@ -11,3 +11,16 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.custom-button {
+  background-color: #f0f0f0; /* Grayish white background */
+  color: #000; /* Black text color */
+  border: none; /* Remove the button border */
+  padding: 4px 36px; /* Adjust padding as needed */
+  border-radius: 10px; /* Add rounded corners if desired */
+  cursor: pointer; /* Change cursor on hover */
+  font-size: 20px;
+}
+.custom-button:hover {
+  background-color: #ccc; /* Lighter gray background on hover */
+}

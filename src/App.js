@@ -10,6 +10,8 @@ import page1font from "/Users/xiaowenyuan/3DWeb/3DReflectionWeb/src/Assets/page1
 import { FontLoader } from 'three/examples/jsm/loaders/FontLoader.js';
 import { CubeCamera, OrbitControls } from '@react-three/drei';
 import { extend } from '@react-three/fiber';
+import Overlay from '/Users/xiaowenyuan/3DWeb/3DReflectionWeb/src/home-overlay.js';
+
 
 
 
@@ -73,7 +75,7 @@ function App() {
 
         <Suspense fallback={null}>
           <Screen />
-       
+          <Overlay />
          
           <OrbitControls />
         </Suspense>
