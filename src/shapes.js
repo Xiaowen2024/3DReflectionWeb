@@ -4,10 +4,10 @@ import { Environment, Lightformer, OrbitControls, PivotControls } from '@react-t
 import useSpline from '@splinetool/r3f-spline'
 import { useControls } from 'leva'
 
-export default function App() {
+export default function Shapes() {
   return (
     <Canvas orthographic camera={{ position: [6, -5, 10], zoom: 60 }}>
-      <color attach="background" args={['#fef4ef']} />
+      {/* <color attach="background" args={['#fef4ef']} />
       <ambientLight />
       <directionalLight castShadow intensity={0.6} position={[0, 0, 10]} />
       <Scene scale={0.01} />
@@ -22,7 +22,7 @@ export default function App() {
           <Lightformer intensity={2} rotation-y={Math.PI / 2} position={[-5, -1, -1]} scale={[50, 2, 1]} />
           <Lightformer intensity={2} rotation-y={-Math.PI / 2} position={[10, 1, 0]} scale={[50, 2, 1]} />
         </group>
-      </Environment>
+      </Environment> */}
     </Canvas>
   )
 }

@@ -13,57 +13,24 @@ import "./index.css";
 extend({ motion, AnimatePresence, Canvas,  state, Logo, AiFillCamera, AiOutlineArrowLeft, AiOutlineHighlight, AiOutlineShopping });
 
 export default function Overlay() {
-  const snap = useSnapshot(state)
-  const transition = { type: 'spring', duration: 0.8 }
-  const config = {
-    initial: { x: -100, opacity: 0, transition: { ...transition, delay: 0.5 } },
-    animate: { x: 0, opacity: 1, transition: { ...transition, delay: 0 } },
-    exit: { x: -100, opacity: 0, transition: { ...transition, delay: 0 } }
-  } 
+  
   return (
    
     <Html>
-      <motion.header initial={{ opacity: 0, y: -100 }} animate={{ opacity: 1, y: 0 }} transition={transition}>
+      {/* <motion.header initial={{ opacity: 0, y: -100 }} animate={{ opacity: 1, y: 0 }} transition={transition}>
       
         <motion.div animate={{ x: snap.intro ? 0 : 100, opacity: snap.intro ? 1 : 0 }} transition={transition}>
        
         </motion.div>
-      </motion.header>
-      <AnimatePresence>
-        {snap.intro ? (
-          <motion.section key="main" {...config}>
-            <div className="section--container">
-              <div className="support--content">
-                <motion.div
-                  key="p" 
-                  initial={{ y: 100, opacity: 0 }}
-                  animate={{ y: 0, opacity: 1 }}
-                  transition={{
-                    type: 'spring',
-                    damping: 7,
-                    stiffness: 30,
-                    restDelta: 0.001,
-                    duration: 0.6,
-                    delay: 0.2,
-                    delayChildren: 0.2
-                  }}>
-                
-                <button className="custom-button" onClick={() => (state.intro = false)}>
-  <span>Answer</span> <AiOutlineHighlight size="1.3em" />
-</button>
-                </motion.div>
-              </div>
-            </div>
-          </motion.section>
-        ) : (
-          <motion.section key="custom" {...config}>
-            <Customizer />
-          </motion.section>
-        )}
-      </AnimatePresence>
-     
+      </motion.header> */}
+      <motion.div className="intro" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1 }}>
+        
+        <h1></h1>
+        <h2></h2>
+        <button onClick={() => (state.intro = false)}>START</button>
+      </motion.div>
+    
     </Html>
-   
   )
 }
 

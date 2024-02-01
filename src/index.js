@@ -5,17 +5,21 @@ import App from './App';
 import Overlay from './home-overlay';
 import reportWebVitals from './reportWebVitals';
 import { Canvas } from "@react-three/fiber";
+import { BrowserRouter as  Router, Route, Routes } from 'react-router-dom'
+import Navbar from 'react-bootstrap/Navbar';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
-    <Canvas>
+    <Router>
+      <Routes>
+        <Route path="/" element={<App/>}/>
 
-    < Overlay />
-    </Canvas>
-  </React.StrictMode>
+      </Routes>
+    </Router>
+  </React.StrictMode> 
 );
+
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

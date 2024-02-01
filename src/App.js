@@ -11,9 +11,12 @@ import { FontLoader } from 'three/examples/jsm/loaders/FontLoader.js';
 import { CubeCamera, OrbitControls } from '@react-three/drei';
 import { extend } from '@react-three/fiber';
 import Overlay from '/Users/xiaowenyuan/3DWeb/3DReflectionWeb/src/home-overlay.js';
-
-
-
+import Shapes from './shapes';
+import { Html } from "@react-three/drei";
+import "./index.css";
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import input from './input';
 
 
 
@@ -75,14 +78,29 @@ function App() {
 
         <Suspense fallback={null}>
           <Screen />
-          <Overlay />
+        
+          
+         
          
           <OrbitControls />
+          
         </Suspense>
+       
+       
       </Canvas>
-      <p> hello </p>
-    </div>
+
+      <button className='custom-button' >
+          <Link to="/page2"> 
+          <span class="btn-inner">
+              
+            <span class="btn-text">Answer</span>
+      </span>
+      </Link>
+      
+      </button>
+      </div>
   );
 }
+
 
 export default App; 
