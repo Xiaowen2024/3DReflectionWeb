@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+import Input from './input';
 import Overlay from './home-overlay';
 import reportWebVitals from './reportWebVitals';
 import { Canvas } from "@react-three/fiber";
@@ -10,14 +11,17 @@ import Navbar from 'react-bootstrap/Navbar';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+ 
     <Router>
       <Routes>
+        
         <Route path="/" element={<App/>}/>
-
+        <Route path="/input" element={<Input/>}/>
+        
       </Routes>
     </Router>
-  </React.StrictMode> 
+        
+ 
 );
 
 

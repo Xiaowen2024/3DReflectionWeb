@@ -14,9 +14,7 @@ import Overlay from '/Users/xiaowenyuan/3DWeb/3DReflectionWeb/src/home-overlay.j
 import Shapes from './shapes';
 import { Html } from "@react-three/drei";
 import "./index.css";
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-import { Link } from 'react-router-dom';
-import input from './input';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 
 
@@ -59,6 +57,8 @@ function Screen() {
 
 
 function App() {
+ 
+
   const font = new FontLoader().parse(page1font);
   return (
     <div className="App">
@@ -90,10 +90,10 @@ function App() {
       </Canvas>
 
       <button className='custom-button' >
-          <Link to="/page2"> 
-          <span class="btn-inner">
+          <Link to="/input"> 
+          <span className="btn-inner">
               
-            <span class="btn-text">Answer</span>
+            <span className="btn-text">Answer</span>
       </span>
       </Link>
       
