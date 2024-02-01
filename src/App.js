@@ -8,13 +8,10 @@ import './App.css';
 import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry';
 import page1font from "/Users/xiaowenyuan/3DWeb/3DReflectionWeb/src/Assets/page1.json"
 import { FontLoader } from 'three/examples/jsm/loaders/FontLoader.js';
-import { CubeCamera, OrbitControls } from '@react-three/drei';
+import { CubeCamera, OrbitControls} from '@react-three/drei';
 import { extend } from '@react-three/fiber';
-import Overlay from '/Users/xiaowenyuan/3DWeb/3DReflectionWeb/src/home-overlay.js';
-import Shapes from './shapes';
-import { Html } from "@react-three/drei";
 import "./index.css";
-import { BrowserRouter as Router, Route, Link, useNavigate } from 'react-router-dom';
+import { BrowserRouter as useNavigate } from 'react-router-dom';
 
 
 
@@ -71,6 +68,7 @@ let navigate = useNavigate();
       <Canvas style={ {height: '100vh', backgroundColor: 'black'}}>
         <ambientLight intensity={1.2} />
         <directionalLight color={"#fb9062"} position={[-1, -0.2, 5]} intensity={0.8} />
+    
        <CubeCamera position={[-5, 0.8, 0]} resolution={256} frames={Infinity} rotation={[0, Math.PI / 20, 0]}>
           {(texture) => (
             <mesh>

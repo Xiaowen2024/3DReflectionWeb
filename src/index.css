@@ -12,6 +12,9 @@ code {
     monospace;
 }
 
+canvas {
+  background-color: black;
+}
 
 .custom-button {
   transition: all 0.2s ease;

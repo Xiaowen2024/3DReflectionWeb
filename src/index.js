@@ -8,20 +8,24 @@ import reportWebVitals from './reportWebVitals';
 import { Canvas } from "@react-three/fiber";
 import { BrowserRouter as  Router, Route, Routes } from 'react-router-dom'
 import Navbar from 'react-bootstrap/Navbar';
+import { ControlledInput } from './inputfield';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
  
     <Router>
+     
       <Routes>
         
         <Route path="/" element={<App/>}/>
         <Route path="/input" element={<Input/>}/>
+
+        <Route path="/field" element={<ControlledInput/>}/>
         
       </Routes>
+
     </Router>
         
- 
 );
 
 
